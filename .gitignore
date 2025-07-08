@@ -1,0 +1,17 @@
+# .NET
+bin/
+obj/
+*.csproj.user
+
+# Node.js
+node_modules/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Database
+*.mdf
+*.ldf
