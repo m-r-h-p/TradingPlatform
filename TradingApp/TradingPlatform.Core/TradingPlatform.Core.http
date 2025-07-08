@@ -1,0 +1,6 @@
+@TradingPlatform.Core_HostAddress = http://localhost:5279
+
+GET {{TradingPlatform.Core_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
