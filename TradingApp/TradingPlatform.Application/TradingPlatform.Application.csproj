@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TradingPlatform.Core\TradingPlatform.Core.csproj" />
+  </ItemGroup>
+
 </Project>
