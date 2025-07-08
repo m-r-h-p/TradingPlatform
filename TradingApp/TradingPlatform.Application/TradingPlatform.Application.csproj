@@ -10,4 +10,8 @@
     <ProjectReference Include="..\TradingPlatform.Core\TradingPlatform.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\Implementations\" />
+  </ItemGroup>
+
 </Project>
