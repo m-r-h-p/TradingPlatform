@@ -1,16 +1,20 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using TradingPlatform.Application.Services.Interfaces;
 using TradingPlatform.Core.DTOs;
+using TradingPlatform.Core.Entities;
+using TradingPlatform.Infrastructure.Data;
 
 namespace TradingPlatform.Application.Services.Implementations
 {
     public class JwtService : IJwtService
     {
         private readonly IConfiguration _configuration;
+        private readonly ApplicationDbContext _context;
 
         public JwtService(IConfiguration configuration)
         {
@@ -45,13 +49,29 @@ namespace TradingPlatform.Application.Services.Implementations
         }
         public async Task<string> GenerateRefreshTokenAsync(string userId)
         {
-            // Store refresh token in database (simplified for now)
-            return Guid.NewGuid().ToString();
+            var refreshToken = new RefreshToken
+            {
+                Id = Guid.NewGuid(),
+                UserId = userId,
+                Token = Guid.NewGuid().ToString(),
+                IssuedAt = DateTime.UtcNow,
+                ExpiresAt = DateTime.UtcNow.AddDays(7), // ریفرش توکن 7 روزه
+                IsRevoked = false
+            };
+            _context.RefreshTokens.Add(refreshToken);
+            await _context.SaveChangesAsync();
+
+            return refreshToken.Token;
         }
-
-
         public async Task<bool> ValidateRefreshTokenAsync(string userId, string refreshToken)
         {
+            var token = await _context.RefreshTokens
+                .FirstOrDefaultAsync(rt => rt.UserId == userId && rt.Token == refreshToken);
+
+            if (token == null || token.IsRevoked || token.ExpiresAt < DateTime.UtcNow)
+            {
+                return false;
+            }
             return true;
         }
     }

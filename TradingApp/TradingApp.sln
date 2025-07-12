@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35506.116 d17.12
+VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradingPlatform.API", "TradingPlatform.API\TradingPlatform.API.csproj", "{4819234A-963F-433C-AE88-F28BED409311}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradingPlatform.Application", "TradingPlatform.Application\TradingPlatform.Application.csproj", "{33115A81-2C6E-4580-ADEB-2C6EF6276E5E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradingPlatform.Core", "TradingPlatform.Core\TradingPlatform.Core.csproj", "{3F524738-7A24-4919-A234-51FDB3F8A506}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradingPlatform.Infrastructure", "TradingPlatform.Infrastructure\TradingPlatform.Infrastructure.csproj", "{583C4C84-D5A0-403C-8A56-D490CC8ED5D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradingPlatform.Application", "TradingPlatform.Application\TradingPlatform.Application.csproj", "{3250DFB1-E55D-4CCB-9B36-C8A159190415}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,6 @@ Global
 		{4819234A-963F-433C-AE88-F28BED409311}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4819234A-963F-433C-AE88-F28BED409311}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4819234A-963F-433C-AE88-F28BED409311}.Release|Any CPU.Build.0 = Release|Any CPU
-		{33115A81-2C6E-4580-ADEB-2C6EF6276E5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{33115A81-2C6E-4580-ADEB-2C6EF6276E5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{33115A81-2C6E-4580-ADEB-2C6EF6276E5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{33115A81-2C6E-4580-ADEB-2C6EF6276E5E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3F524738-7A24-4919-A234-51FDB3F8A506}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3F524738-7A24-4919-A234-51FDB3F8A506}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F524738-7A24-4919-A234-51FDB3F8A506}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{583C4C84-D5A0-403C-8A56-D490CC8ED5D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{583C4C84-D5A0-403C-8A56-D490CC8ED5D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{583C4C84-D5A0-403C-8A56-D490CC8ED5D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3250DFB1-E55D-4CCB-9B36-C8A159190415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3250DFB1-E55D-4CCB-9B36-C8A159190415}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3250DFB1-E55D-4CCB-9B36-C8A159190415}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3250DFB1-E55D-4CCB-9B36-C8A159190415}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
