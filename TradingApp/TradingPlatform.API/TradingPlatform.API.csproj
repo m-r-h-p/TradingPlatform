@@ -21,10 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\TradingPlatform.Application\TradingPlatform.Application.csproj" />
     <ProjectReference Include="..\TradingPlatform.Infrastructure\TradingPlatform.Infrastructure.csproj" />
   </ItemGroup>
